@@ -1,24 +1,16 @@
-using Gtk;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
+using Gtk;
+
+
+
 public partial class MainWindow : Gtk.Window
 {
-    public class Cipher
-    {
-        public String SelectedFilePath { get; set; }
-    }
-    Cipher pc_cphr = new Cipher();
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
     }
+
+    public String SelectedFilePath { get; set; }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
@@ -26,17 +18,30 @@ public partial class MainWindow : Gtk.Window
         a.RetVal = true;
     }
 
-    protected void OnBtnSelectFilelicked(object sender, EventArgs e)
+    protected void OnBtnSelectFileClicked(object sender, EventArgs e)
     {
-        status.Text = "";
-        btnDecipher.Sensitive = false;
-        btnCipher.Sensitive = false;
-        FileChooserDialog d = new FileChooserDialog("Выберите файл", null, FileChooserAction.SelectFolder, "Выход", ResponseType.Cancel, "Выбрать", ResponseType.Accept);
-        if (d.Run() == (int)ResponseType.Accept)
+        using (FileChooserDialog d =
+        new FileChooserDialog(null,
+                              "Выберите файл...",
+                              null,
+                              FileChooserAction.Open,
+                              "Выбрать",
+                              ResponseType.Accept,
+                              "Закрыть",
+                              ResponseType.Close))
         {
-            pc_cphr.SelectedFilePath = d.Filename;
+            if (d.Run() == (int)ResponseType.Accept)
+            {
+                SelectedFilePath = d.Filename;
+                d.Destroy();
+                btnCipher.Sensitive = true;
+                btnDecipher.Sensitive = true;
+            }
+            else if (d.Run() == (int)ResponseType.Close)
+            {
+                d.Destroy();
+            }
         }
-        d.Destroy();
+        return;
     }
 }
-
