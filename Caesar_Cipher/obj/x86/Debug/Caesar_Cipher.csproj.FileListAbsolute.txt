@@ -1,0 +1,6 @@
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/bin/Debug/Caesar_Cipher.exe
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/bin/Debug/Caesar_Cipher.pdb
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/obj/x86/Debug/Caesar_Cipher.csprojAssemblyReference.cache
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/obj/x86/Debug/Caesar_Cipher.csproj.CoreCompileInputs.cache
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/obj/x86/Debug/Caesar_Cipher.exe
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/obj/x86/Debug/Caesar_Cipher.pdb

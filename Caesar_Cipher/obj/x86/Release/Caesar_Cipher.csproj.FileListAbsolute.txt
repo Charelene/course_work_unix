@@ -1,0 +1,3 @@
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/bin/Release/Caesar_Cipher.exe
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/obj/x86/Release/Caesar_Cipher.csproj.CoreCompileInputs.cache
+/home/mrchelbas/Projects/Caesar_Cipher/Caesar_Cipher/obj/x86/Release/Caesar_Cipher.exe
