@@ -45,6 +45,7 @@ public partial class MainWindow : Gtk.Window
                 d.Destroy();
             }
         }
+        status.Text = "";
         return;
     }
     public uint shift = 14;
@@ -111,7 +112,7 @@ public partial class MainWindow : Gtk.Window
                 d.Destroy();
             }
         }
-        string path = SelectedSavePath + "Ciphered.txt";
+        string path = SelectedSavePath + " Ciphered.txt";
         File.Create("Ciphered.txt");
         File.WriteAllText(path, result);
         btnCipher.Sensitive = false;
@@ -176,9 +177,10 @@ public partial class MainWindow : Gtk.Window
                 d.Destroy();
             }
         }
-        string path = SelectedSavePath + "Deciphered.txt";
+        string path = SelectedSavePath + " Deciphered.txt";
         File.Create("Deciphered.txt");
         File.WriteAllText(path, result);
         btnCipher.Sensitive = false;
         btnDecipher.Sensitive = false;
     }
+}
